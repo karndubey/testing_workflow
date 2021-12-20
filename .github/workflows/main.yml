@@ -1,4 +1,4 @@
-name: React CI
+name: Upload on S3
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - run: yarn install
-      - uses: karndubey/testing_workflow@master
+      - uses: karndubey/testing_workflow@main
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
