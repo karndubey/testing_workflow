@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: yarn install
-      - uses: aerotime/s3-sync-action@master
+      - uses: karndubey/testing_workflow@master
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
